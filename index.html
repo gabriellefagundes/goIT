@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicativo de Doações</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Tela de Login -->
+  <div class="tela" id="tela-login">
+    <div class="login-container">
+      <img src="avatar.png" alt="Avatar" class="avatar">
+      <h1>Bem-vindo</h1>
+      <p>Faça login para começar</p>
+      <button class="btn" data-next="tela-inicial">Entrar</button>
+    </div>
+  </div>
+
+  <!-- Tela Inicial -->
+  <div class="tela" id="tela-inicial">
+    <header>
+      <h1>Olá, Larissa</h1>
+      <p>Saldo disponível: <strong>R$ 345,75</strong></p>
+    </header>
+    <div class="opcoes">
+      <button class="btn" data-next="tela-extrato">Extrato</button>
+      <button class="btn" data-next="tela-cartao">Cartão</button>
+      <button class="btn" data-next="tela-pix">Pix</button>
+    </div>
+  </div>
+
+  <!-- Tela Extrato -->
+  <div class="tela" id="tela-extrato">
+    <header>
+      <h1>Extrato</h1>
+    </header>
+    <ul class="lista-extrato">
+      <li>Doação de alimentos: R$ 50,00</li>
+      <li>Compra em brechó: R$ 25,00</li>
+      <li>Horta comunitária: R$ 30,00</li>
+    </ul>
+    <button class="btn voltar" data-next="tela-inicial">Voltar</button>
+  </div>
+
+  <!-- Tela Cartão -->
+  <div class="tela" id="tela-cartao">
+    <header>
+      <h1>Cartão</h1>
+    </header>
+    <p>Saldo atual: <strong>R$ 23,45</strong></p>
+    <button class="btn voltar" data-next="tela-inicial">Voltar</button>
+  </div>
+
+  <!-- Tela Pix -->
+  <div class="tela" id="tela-pix">
+    <header>
+      <h1>Transferência Pix</h1>
+    </header>
+    <p>Saldo disponível: <strong>R$ 0,00</strong></p>
+    <button class="btn" data-next="tela-comprovante">Enviar</button>
+    <button class="btn voltar" data-next="tela-inicial">Voltar</button>
+  </div>
+
+  <!-- Tela Comprovante -->
+  <div class="tela" id="tela-comprovante">
+    <header>
+      <h1>Comprovante</h1>
+    </header>
+    <p>Transferência realizada com sucesso!</p>
+    <button class="btn voltar" data-next="tela-inicial">Voltar</button>
+  </div>
+
+  <script src="ecodoar.js"></script>
+</body>
+</html>
