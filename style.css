@@ -1,0 +1,68 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo geral */
+  body {
+    background: #2ecc71;
+    color: #fff;
+  }
+  
+  .tela {
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .tela.ativa {
+    display: flex;
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .opcoes {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .lista-extrato {
+    list-style: none;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .lista-extrato li {
+    margin-bottom: 10px;
+  }
+  
+  /* Botões */
+  .btn {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #1e8449;
+  }
+  
+  .voltar {
+    margin-top: 20px;
+  }
