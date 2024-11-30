@@ -3,72 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aplicativo de Doações</title>
+  <title>App de Doações</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Tela de Login -->
-  <div class="tela" id="tela-login">
-    <div class="login-container">
-      <img src="avatar.png" alt="Avatar" class="avatar">
-      <h1>Bem-vindo</h1>
-      <p>Faça login para começar</p>
-      <button class="btn" data-next="tela-inicial">Entrar</button>
-    </div>
-  </div>
-
-  <!-- Tela Inicial -->
-  <div class="tela" id="tela-inicial">
-    <header>
-      <h1>Olá, Larissa</h1>
-      <p>Saldo disponível: <strong>R$ 345,75</strong></p>
-    </header>
+  <!-- Tela de Seleção - Doador ou Beneficiário -->
+  <div class="content" id="tela-login">
+    <!-- Logo -->
+    <img src="eco.png" alt="Logo" class="logo">
+    <p class="title">Selecione uma opção</p>
     <div class="opcoes">
-      <button class="btn" data-next="tela-extrato">Extrato</button>
-      <button class="btn" data-next="tela-cartao">Cartão</button>
-      <button class="btn" data-next="tela-pix">Pix</button>
+      <button id="doadorBtn" class="opcao-btn">Sou doador</button>
+      <button id="beneficiarioBtn" class="opcao-btn">Sou beneficiário</button>
+    </div>
+    <button id="entrarBtn" class="entrar-button">Entrar</button>
+  </div>
+
+  <!-- Tela de Login -->
+  <div class="content" id="tela-login-usuario" style="display: none;">
+    <!-- Logo -->
+    <img src="eco.png" alt="Logo" class="logo">
+    <p class="title">Login</p>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="usuario">Usuário</label>
+        <input type="text" id="usuario" placeholder="Digite seu usuário" required>
+      </div>
+      <div class="input-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" required>
+      </div>
+      <div class="options">
+        <label><input type="checkbox" id="lembrar"> Lembrar</label>
+        <a href="#" id="esquecerSenha">Esqueceu a senha?</a>
+      </div>
+      <button type="submit" class="entrar-button">Entrar</button>
+    </form>
+    <div class="cadastro-link">
+      <a href="#" id="fazerCadastro">Fazer cadastro</a>
     </div>
   </div>
 
-  <!-- Tela Extrato -->
-  <div class="tela" id="tela-extrato">
-    <header>
-      <h1>Extrato</h1>
-    </header>
-    <ul class="lista-extrato">
-      <li>Doação de alimentos: R$ 50,00</li>
-      <li>Compra em brechó: R$ 25,00</li>
-      <li>Horta comunitária: R$ 30,00</li>
-    </ul>
-    <button class="btn voltar" data-next="tela-inicial">Voltar</button>
-  </div>
-
-  <!-- Tela Cartão -->
-  <div class="tela" id="tela-cartao">
-    <header>
-      <h1>Cartão</h1>
-    </header>
-    <p>Saldo atual: <strong>R$ 23,45</strong></p>
-    <button class="btn voltar" data-next="tela-inicial">Voltar</button>
-  </div>
-
-  <!-- Tela Pix -->
-  <div class="tela" id="tela-pix">
-    <header>
-      <h1>Transferência Pix</h1>
-    </header>
-    <p>Saldo disponível: <strong>R$ 0,00</strong></p>
-    <button class="btn" data-next="tela-comprovante">Enviar</button>
-    <button class="btn voltar" data-next="tela-inicial">Voltar</button>
-  </div>
-
-  <!-- Tela Comprovante -->
-  <div class="tela" id="tela-comprovante">
-    <header>
-      <h1>Comprovante</h1>
-    </header>
-    <p>Transferência realizada com sucesso!</p>
-    <button class="btn voltar" data-next="tela-inicial">Voltar</button>
+  <!-- Tela de Cadastro -->
+  <div class="content" id="tela-cadastro" style="display: none;">
+    <!-- Logo -->
+    <img src="eco.png" alt="Logo" class="logo">
+    <p class="title">Crie seu cadastro</p>
+    <form id="cadastroForm">
+      <div class="input-group">
+        <label for="nomeCadastro">Nome</label>
+        <input type="text" id="nomeCadastro" placeholder="Digite seu nome" required>
+      </div>
+      <div class="input-group">
+        <label for="senhaCadastro">Senha</label>
+        <input type="password" id="senhaCadastro" placeholder="Digite sua senha" required>
+      </div>
+      <div class="input-group">
+        <label for="emailCadastro">E-mail</label>
+        <input type="email" id="emailCadastro" placeholder="Digite seu e-mail" required>
+      </div>
+      <button type="submit" class="entrar-button">Cadastrar</button>
+    </form>
+    <div class="login-link">
+      <a href="#" id="voltarLogin">Possui login?</a>
+    </div>
   </div>
 
   <script src="ecodoar.js"></script>
